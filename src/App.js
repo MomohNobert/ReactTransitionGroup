@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import { CSSTransition } from 'react-transition-group';
+
 function App() {
 
   const [titleScreen, setTitleScreen] = useState(true);
   const [gameBoard, setGameBoard] = useState(false);
 
   const startGame = () => {
-    setTitleScreen(false);
-    setGameBoard(true);
+    setTitleScreen(!titleScreen);
+    setGameBoard(!gameBoard);
   }  
 
   return (
     <div className="game">
-      {titleScreen && <TitleScreen startGame={startGame} />}
+      <CSSTransition
+        in={titleScreen}
+        timeout={1000}
+        classNames={"title-screen-"}
+        unmountOnExit={true}
+      >
+        <TitleScreen startGame={startGame} />
+      </CSSTransition>
+
       {gameBoard && <GameBoard />}
     </div>
   );
