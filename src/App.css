@@ -54,7 +54,7 @@ body {
 
 .title-screen--exit-active { 
   transform: rotateY(90deg) rotateX(45deg); 
-  transition: transform 0.8s cubic-bezier(0.5, 0, 0.75, 0); 
+  transition: transform 1s cubic-bezier(0.5, 0, 0.75, 0); 
 }
 
 /* ---------- */

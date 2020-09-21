@@ -9,22 +9,29 @@ function App() {
   const [gameBoard, setGameBoard] = useState(false);
 
   const startGame = () => {
-    setTitleScreen(!titleScreen);
-    setGameBoard(!gameBoard);
+    setTitleScreen(false);
   }  
 
   return (
     <div className="game">
       <CSSTransition
         in={titleScreen}
-        timeout={1000}
+        timeout={{ exit: 1000, appear: 2000 }}
         classNames={"title-screen-"}
         unmountOnExit={true}
+        appear={true}
+        onExited={() => setGameBoard(true)}
       >
         <TitleScreen startGame={startGame} />
       </CSSTransition>
-
-      {gameBoard && <GameBoard />}
+      <CSSTransition 
+        in={gameBoard}
+        timeout={1000}
+        classNames={"game-board-"}
+        mountOnEnter={true}
+      >
+        <GameBoard />
+      </CSSTransition>
     </div>
   );
 }
