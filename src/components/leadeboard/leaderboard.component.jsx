@@ -47,7 +47,7 @@ const LeaderBoard = () => {
 
         <div className="leaderboard-list">
           <TransitionGroup component={null}>
-          {this.state.activeUsers.map((userName, index) => (
+          {activeUsers.map((userName, index) => (
             <CSSTransition
             key={`user-${index}`}
             timeout={{
