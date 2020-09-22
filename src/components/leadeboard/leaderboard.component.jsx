@@ -5,9 +5,6 @@ const LeaderBoard = () => {
     const [users, setUsers] = useState(['Mariusz', 'Matt', 'Lauren', 'Beckett', 'Dulio', 'Steve', 'Chris']);
     const [activeUsers, setActiveUsers] = useState(['Myra', 'Clement']);
 
-    console.log(users.length, activeUsers.length)
-
-
     const addUser = () => {
         if (users.length <= 0) return;
 
