@@ -2,14 +2,15 @@
 /* Global Styles */
 /* ------------- */
 
-*, *:before, *:after { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: border-box; margin: 0; padding: 0;}
 
-body {
+.app {
   margin: 0;
   background: #5e3fde;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   font-family: 'Roboto', sans-serif;
