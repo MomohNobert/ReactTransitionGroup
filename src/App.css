@@ -16,6 +16,7 @@
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: monospace;
 }
 
 .btn-toggle:hover { background: #d0c7f7; }
@@ -105,25 +106,6 @@
 /* Icons */
 /* ----- */
 
-.icon {
-  width: 80px;
-  display: block;
-  cursor: pointer;
-}
-
-.icon:first-child { margin-right: 20px; }
-
-.icon__line {
-  fill: none;
-  stroke: #d9a2a9;
-  stroke-width: 20;
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
-  transition: stroke 0.2s;
-}
-
-.icon:hover .icon__line { stroke: #ff6286; }
-
 
 .player {
   display: flex;
@@ -138,7 +120,7 @@
   padding: 0 10px 0 20px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.2px;
   position: relative;
   z-index: 20;
@@ -181,12 +163,12 @@
 /* Icons */
 /* ----- */
 
-.icon {
+.small_icon {
   height: 50%;
   cursor: pointer;
 }
 
-.icon__line{
+.small_icon__line{
   fill: none;
   stroke: #F05483;
   stroke-width: 20;
@@ -194,3 +176,22 @@
   transition: stroke 0.2s;
   stroke-linecap:round;
 }
+
+.icon {
+  width: 80px;
+  display: block;
+  cursor: pointer;
+}
+
+.icon:first-child { margin-right: 20px; }
+
+.icon__line {
+  fill: none;
+  stroke: #d9a2a9;
+  stroke-width: 20;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  transition: stroke 0.2s;
+}
+
+.icon:hover .icon__line { stroke: #ff6286; }
