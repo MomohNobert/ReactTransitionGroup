@@ -6,7 +6,7 @@ const PlayerSwap = () => {
     const [player, setPlayer] = useState('x')
 
     const changePlayer = () => {
-        player == 'x' ? setPlayer('o') : setPlayer('x')
+        player === 'x' ? setPlayer('o') : setPlayer('x')
     }
 
     return (
