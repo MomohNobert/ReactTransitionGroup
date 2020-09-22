@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const LeaderBoard = () => {
     const [users, setUsers] = useState(['Mariusz', 'Matt', 'Lauren', 'Beckett', 'Dulio', 'Steve', 'Chris'])
-    const [activeUsers, setActiveUsers] = useState(['Mariusz', 'Matt', 'Lauren', 'Beckett', 'Dulio', 'Steve', 'Chris'])
+    const [activeUsers, setActiveUsers] = useState(['Myra', 'Clement'])
 
     const addUser = () => {
         if (!users.length) return;
