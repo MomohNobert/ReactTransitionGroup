@@ -8,8 +8,10 @@ import LeaderBoard from './components/leadeboard/leaderboard.component';
 function App() {
   return (
     <div className="app">
+      <div>
       <PlayerSwap />
       <Board />
+      </div>
       <LeaderBoard />
     </div>
   );
