@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const LeaderBoard = () => {
-    const [users, setUsers] = useState(['Mariusz', 'Matt', 'Lauren', 'Beckett', 'Dulio', 'Steve', 'Chris'])
-    const [activeUsers, setActiveUsers] = useState(['Myra', 'Clement'])
+    const [users, setUsers] = useState(['Mariusz', 'Matt', 'Lauren', 'Beckett', 'Dulio', 'Steve', 'Chris']);
+    const [activeUsers, setActiveUsers] = useState(['Myra', 'Clement']);
+
+    console.log(users.length, activeUsers.length)
+
 
     const addUser = () => {
-        if (!users.length) return;
+        if (users.length <= 0) return;
 
         const randomIndex = Math.floor(Math.random()*users.length);
         const userToAdd = users[randomIndex];
@@ -18,7 +21,7 @@ const LeaderBoard = () => {
     }
 
     const removeUser = () => {
-        if (!users.length) return;
+        if (activeUsers.length <= 0) return;
         
         const newUsers = [...users];
         const newActiveUsers = [...activeUsers];
